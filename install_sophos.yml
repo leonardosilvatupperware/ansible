@@ -1,0 +1,7 @@
+# Trying to bulk install sophos on Linux server 
+- hosts: test
+  become: yes
+  user: twbrandsit
+  gather_facts: no
+  roles:
+  - { role: install_sophos, tags: ["install_sophos_role"]}

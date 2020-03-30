@@ -1,0 +1,15 @@
+---
+# tasks file for tupperware
+- name: Copy installation file of Sophos
+  copy:
+    src: /home/twbrandsit/roles/install_sophos/files/SophosInstall.sh
+    dest: /home/twbrandsit/SophosInstall.sh
+    owner: twbrandsit
+    group: twbrandsit
+
+- name: Run script installation
+  script: 
+    cmd: ./SophosInstall.sh
+    args:
+      chdir: /home/twbrandsit/
+  
